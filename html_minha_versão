@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de média</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+Display:wght@100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet">
+    <!---->
+</head>
+<body>
+    <header>
+        <div id="header">
+            <img src="./images/logo.png" id="logo" alt="Logo faculdade">
+            <h1>Calculadora de média escolar</h1>
+            <br>
+        </div>
+    </header>
+    <form>
+        <input type="text" id="nome-atividade" placeholder="Nome da Atividade" required/>
+        <input type="number" id="nota" placeholder="Nota" required min="0" max="10"/>
+        <button type="submit" id="adicionar">Adicionar + </button>
+    </form>
+    <br>
+    <table id="tabela"><!--CRIA A TABELA-->
+        <thead id="cabeçalho"><!--CRIA O CABEÇALHO-->
+            <tr><!--CRIA UMA LINHA-->
+                <th><!--CRIA COLUNAS-->
+                    Nome da atividade
+                </th>
+                <hr>
+                <th>
+                    Nota
+                </th>
+                <th>
+                    Aprovado / Reprovado
+                </th>
+            </tr>
+        </thead>
+        <tbody id="corpo-tabela"><!--CRIA O CONTEÚDO DA TABELA-->
+            <tr><!--CRIA A LINHA-->
+                <td><!--CRIA COLUNA-->Atividade 1</td>
+                <td>7</td>
+                <td>
+                    <img id="emoji" src="./images/aprovado.png" alt="Emoji festejando ">
+                </td>
+            </tr>
+        </tbody>
+        <tfoot><!--rodapé da tabela-->
+            <tr>
+                    <td class="resultado">Nota média</td><!--CRIA COLUNA-->
+                    <td class="resultado">7</td>
+                    <td class="resultado">Aprovado</td>
+            </tr>
+        </tfoot>
+    </table>
+    <script src="./script.js"></script>
+</body>
+</html>
